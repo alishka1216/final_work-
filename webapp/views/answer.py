@@ -1,62 +1,59 @@
-from django.shortcuts import render, get_object_or_404, redirect
-from webapp.models import BaseModel, Tracker, Project
-from django.views.generic import View, TemplateView, RedirectView, FormView, ListView, DetailView, CreateView, UpdateView, DeleteView
-from django.http import HttpResponseRedirect, HttpResponseNotFound
+from django.shortcuts import get_object_or_404, redirect
+from webapp.models import Answer, Question
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.urls import reverse, reverse_lazy
-from django.db.models import Q
-from django.utils.http import urlencode
-from webapp.forms import TrackerForm, SearchForm
-from webapp.base_view import CustomFormView, CustomListView
+
+from webapp.forms import AnswerForm
 
 
 class IndexView(ListView):
-    template_name = 'trackers/index.html'
-    model = Tracker
-    context_object_name = 'trackers'
+    template_name = 'answers/answer_index.html'
+    model = Answer
+    context_object_name = 'answers'
     ordering = ('title', '-created_ad')
     paginate_by = 10
     paginate_orphans = 3
 
 
-class TrackerView(DetailView):
-    template_name = 'trackers/view.html'
-    model = Tracker
-    context_object_name = 'tracker'
+class AnswerView(DetailView):
+    template_name = 'answers/answer_view.html'
+    model = Answer
+    context_object_name = 'answer'
 
 
-class CreateTrackerView(CreateView):
-    template_name = 'trackers/create.html'
-    model = Tracker
-    form_class = TrackerForm
+class CreateAnswerView(CreateView):
+    template_name = 'answers/answer_create.html'
+    model = Answer
+    form_class = AnswerForm
 
     def form_valid(self, form):
-        project = get_object_or_404(Project, pk=self.kwargs.get('pk'))
-        tracker = form.save(commit=False)
-        tracker.project = project
-        tracker.save()
+        question = get_object_or_404(Question, pk=self.kwargs.get('pk'))
+        answer = form.save(commit=False)
+        answer.project = question
+        answer.save()
         form.save_m2m()
-        return redirect('tracker-view', pk=tracker.pk)
+        return redirect('answer-view', pk=answer.pk)
 
     def get_success_url(self):
-        return reverse('tracker-view', kwargs={'pk': self.object.pk})
+        return reverse('answer-view', kwargs={'pk': self.object.pk})
 
 
-class TrackerUpdateView(UpdateView):
-    model = Tracker
-    template_name = 'trackers/update.html'
-    form_class = TrackerForm
+class AnswerUpdateView(UpdateView):
+    model = Answer
+    template_name = 'answers/answer_update.html'
+    form_class = AnswerForm
     context_object_name = 'tracker'
 
     def get_success_url(self):
-        return reverse('tracker-view', kwargs={'pk': self.object.pk})
+        return reverse('answer-view', kwargs={'pk': self.object.pk})
 
 
-class TrackerDeleteView(DeleteView):
-    template_name = 'trackers/delete.html'
-    model = Tracker
-    context_object_name = 'tracker'
+class AnswerDeleteView(DeleteView):
+    template_name = 'answers/answer_delete.html'
+    model = Answer
+    context_object_name = 'answer'
 
-    success_url = reverse_lazy('tracker-list')
+    success_url = reverse_lazy('answer-list')
 
 
 

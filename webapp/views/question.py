@@ -1,48 +1,48 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from webapp.models import BaseModel, Tracker, Project
+from webapp.models import BaseModel, Question, Answer
 from django.views.generic import View, TemplateView, RedirectView, FormView, ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.http import HttpResponseRedirect, HttpResponseNotFound
 from django.urls import reverse, reverse_lazy
 from django.db.models import Q
 from django.utils.http import urlencode
-from webapp.forms import TrackerForm, SearchForm, ProjectForm
-from webapp.base_view import CustomFormView, CustomListView
+from webapp.forms import AnswerForm, SearchForm, QuestionForm
 
 
-class ProjectList(ListView):
-    template_name = 'projects/project_index.html'
-    model = Project
-    context_object_name = 'projects'
+
+class QuestionList(ListView):
+    template_name = 'questions/question_index.html'
+    model = Question
+    context_object_name = 'questions'
     ordering = ('title',)
     paginate_by = 10
     paginate_orphans = 3
 
 
-class ProjectView(DetailView):
-    template_name = 'projects/project_view.html'
-    model = Project
-    context_object_name = 'project'
+class QuestionView(DetailView):
+    template_name = 'questions/question_view.html'
+    model = Question
+    context_object_name = 'question'
 
 
-class ProjectCreate(CreateView):
-    template_name = 'projects/project_create.html'
-    model = Project
-    form_class = ProjectForm
+class QuestionCreate(CreateView):
+    template_name = 'questions/question_create.html'
+    model = Question
+    form_class = QuestionForm
 
     def get_success_url(self):
-        return reverse('project-view', kwargs={'pk': self.object.pk})
+        return reverse('question-view', kwargs={'pk': self.object.pk})
 
 
-class ProjectUpdate(UpdateView):
-    model = Project
-    template_name = 'projects/project_update.html'
-    form_class = ProjectForm
-    context_object_name = 'project'
+class QuestionUpdate(UpdateView):
+    model = Question
+    template_name = 'questions/project_update.html'
+    form_class = QuestionForm
+    context_object_name = 'question'
 
 
-class ProjectDelete(DeleteView):
-    template_name = 'projects/project_delete.html'
-    model = Project
-    context_object_name = 'project'
+class QuestionDelete(DeleteView):
+    template_name = 'questions/project_delete.html'
+    model = Question
+    context_object_name = 'question'
 
-    success_url = reverse_lazy('project-list')
+    success_url = reverse_lazy('question-list')

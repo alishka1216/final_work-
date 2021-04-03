@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Трейкер Задач</h1>
+    {% if not trackers %}
+        <h2>Нет задач</h2>
+    {% else %}
+        {% include 'partial/search_form.html' %}
+    {% endif %}
+    {% for tracker in trackers %}
+            <p> <a href="{% url "answer-view" answer.id%}">{{ answer.title }}</a></p>
+        {% endfor %}
+    {% include 'partial/paginate.html' %}
+{% endblock content %}
