@@ -1,0 +1,312 @@
+[
+{
+  "model": "webapp.type",
+  "pk": 1,
+  "fields": {
+    "name": "\u0434\u0430"
+  }
+},
+{
+  "model": "webapp.type",
+  "pk": 2,
+  "fields": {
+    "name": "\u043d\u0435\u0442"
+  }
+},
+{
+  "model": "webapp.type",
+  "pk": 3,
+  "fields": {
+    "name": "\u043d\u0435 \u0437\u043d\u0430\u044e"
+  }
+},
+{
+  "model": "webapp.answer",
+  "pk": 1,
+  "fields": {
+    "created_ad": "2021-04-03T11:02:25.972Z",
+    "update_ad": "2021-04-03T11:02:25.972Z",
+    "title": "\u043e\u0442\u0432\u0435\u0442\u044b",
+    "answer": 6
+  }
+},
+{
+  "model": "webapp.answer",
+  "pk": 2,
+  "fields": {
+    "created_ad": "2021-04-03T11:11:14.735Z",
+    "update_ad": "2021-04-03T11:11:14.735Z",
+    "title": "ggggggggggg",
+    "answer": 1
+  }
+},
+{
+  "model": "webapp.answer",
+  "pk": 3,
+  "fields": {
+    "created_ad": "2021-04-03T11:35:42.564Z",
+    "update_ad": "2021-04-03T11:35:42.565Z",
+    "title": "\u043e\u0442\u0432\u0435\u0442",
+    "answer": 1
+  }
+},
+{
+  "model": "webapp.answer",
+  "pk": 4,
+  "fields": {
+    "created_ad": "2021-04-03T11:46:18.215Z",
+    "update_ad": "2021-04-03T11:46:18.215Z",
+    "title": "\u043e\u0442\u0432\u0435\u0442",
+    "answer": 1
+  }
+},
+{
+  "model": "webapp.answer",
+  "pk": 5,
+  "fields": {
+    "created_ad": "2021-04-03T11:50:51.139Z",
+    "update_ad": "2021-04-03T11:50:51.139Z",
+    "title": "sdadasd",
+    "answer": 1
+  }
+},
+{
+  "model": "webapp.answer",
+  "pk": 6,
+  "fields": {
+    "created_ad": "2021-04-03T11:51:40.254Z",
+    "update_ad": "2021-04-03T11:51:40.254Z",
+    "title": "lkldgf",
+    "answer": 1
+  }
+},
+{
+  "model": "webapp.answer",
+  "pk": 7,
+  "fields": {
+    "created_ad": "2021-04-03T11:53:02.901Z",
+    "update_ad": "2021-04-03T11:53:02.901Z",
+    "title": "dsadsasd",
+    "answer": 1
+  }
+},
+{
+  "model": "webapp.answer",
+  "pk": 8,
+  "fields": {
+    "created_ad": "2021-04-03T11:53:25.898Z",
+    "update_ad": "2021-04-03T11:53:25.898Z",
+    "title": "lkjkopjjfd",
+    "answer": 1
+  }
+},
+{
+  "model": "webapp.answer",
+  "pk": 10,
+  "fields": {
+    "created_ad": "2021-04-03T11:57:21.807Z",
+    "update_ad": "2021-04-03T11:57:21.807Z",
+    "title": "dasdas",
+    "answer": 4
+  }
+},
+{
+  "model": "webapp.answer",
+  "pk": 12,
+  "fields": {
+    "created_ad": "2021-04-03T12:06:12.835Z",
+    "update_ad": "2021-04-03T12:06:12.835Z",
+    "title": "dasdd",
+    "answer": 4
+  }
+},
+{
+  "model": "webapp.question",
+  "pk": 1,
+  "fields": {
+    "created_ad": "2021-04-03T10:28:15.463Z",
+    "update_ad": "2021-04-03T10:28:15.464Z",
+    "title": "\u0441\u043a\u043e\u043b\u044c\u043a\u043e \u0442\u0435\u0431\u0435 \u043b\u0435\u0442?"
+  }
+},
+{
+  "model": "webapp.question",
+  "pk": 2,
+  "fields": {
+    "created_ad": "2021-04-03T10:29:09.576Z",
+    "update_ad": "2021-04-03T10:29:09.576Z",
+    "title": "\u0441\u043a\u043e\u043b\u044c\u043a\u043e \u0442\u0435\u0431\u0435 \u043b\u0435\u0442?"
+  }
+},
+{
+  "model": "webapp.question",
+  "pk": 3,
+  "fields": {
+    "created_ad": "2021-04-03T10:41:28.109Z",
+    "update_ad": "2021-04-03T10:41:28.109Z",
+    "title": "dsaddgfgd"
+  }
+},
+{
+  "model": "webapp.question",
+  "pk": 4,
+  "fields": {
+    "created_ad": "2021-04-03T10:45:54.718Z",
+    "update_ad": "2021-04-03T10:45:54.718Z",
+    "title": "dsadda"
+  }
+},
+{
+  "model": "webapp.question",
+  "pk": 5,
+  "fields": {
+    "created_ad": "2021-04-03T10:52:20.661Z",
+    "update_ad": "2021-04-03T10:52:20.661Z",
+    "title": "sdasd"
+  }
+},
+{
+  "model": "webapp.question",
+  "pk": 6,
+  "fields": {
+    "created_ad": "2021-04-03T10:53:06.045Z",
+    "update_ad": "2021-04-03T10:53:06.045Z",
+    "title": "sdasd"
+  }
+},
+{
+  "model": "webapp.question",
+  "pk": 7,
+  "fields": {
+    "created_ad": "2021-04-03T10:54:07.748Z",
+    "update_ad": "2021-04-03T10:54:07.748Z",
+    "title": "sdasd"
+  }
+},
+{
+  "model": "webapp.question",
+  "pk": 8,
+  "fields": {
+    "created_ad": "2021-04-03T10:55:20.578Z",
+    "update_ad": "2021-04-03T10:55:20.578Z",
+    "title": "sdasd"
+  }
+},
+{
+  "model": "webapp.question",
+  "pk": 10,
+  "fields": {
+    "created_ad": "2021-04-03T10:57:59.171Z",
+    "update_ad": "2021-04-03T10:57:59.172Z",
+    "title": "jewhfkwjhfow"
+  }
+},
+{
+  "model": "webapp.question",
+  "pk": 11,
+  "fields": {
+    "created_ad": "2021-04-03T10:59:13.910Z",
+    "update_ad": "2021-04-03T10:59:13.911Z",
+    "title": "klkjjhjkhkj"
+  }
+},
+{
+  "model": "webapp.question",
+  "pk": 12,
+  "fields": {
+    "created_ad": "2021-04-03T11:06:17.326Z",
+    "update_ad": "2021-04-03T11:06:17.326Z",
+    "title": "\u043e\u0440\u0432\u043e\u0432\u044b\u0430\u0440\u044b\u0432\u0444"
+  }
+},
+{
+  "model": "webapp.question",
+  "pk": 13,
+  "fields": {
+    "created_ad": "2021-04-03T11:06:27.497Z",
+    "update_ad": "2021-04-03T11:06:27.497Z",
+    "title": "\u044b\u0432\u0444\u044b\u0432\u0444\u044b\u0432"
+  }
+},
+{
+  "model": "webapp.question",
+  "pk": 14,
+  "fields": {
+    "created_ad": "2021-04-03T11:28:07.268Z",
+    "update_ad": "2021-04-03T11:28:07.268Z",
+    "title": "\u0430\u043b\u0438\u0448\u043a\u0430"
+  }
+},
+{
+  "model": "webapp.question",
+  "pk": 15,
+  "fields": {
+    "created_ad": "2021-04-03T11:29:57.897Z",
+    "update_ad": "2021-04-03T11:29:57.897Z",
+    "title": "\u043b\u043b\u043b\u043b\u043b"
+  }
+},
+{
+  "model": "webapp.question",
+  "pk": 17,
+  "fields": {
+    "created_ad": "2021-04-03T11:31:15.959Z",
+    "update_ad": "2021-04-03T11:31:15.959Z",
+    "title": "\u0430\u0432\u044b\u0430\u044b\u0432"
+  }
+},
+{
+  "model": "webapp.question",
+  "pk": 18,
+  "fields": {
+    "created_ad": "2021-04-03T11:33:32.022Z",
+    "update_ad": "2021-04-03T11:33:32.023Z",
+    "title": "\u044b\u0444\u0432\u0430\u0444\u044b\u0432"
+  }
+},
+{
+  "model": "webapp.question",
+  "pk": 20,
+  "fields": {
+    "created_ad": "2021-04-03T11:57:56.938Z",
+    "update_ad": "2021-04-03T11:57:56.938Z",
+    "title": "\u0412\u041e\u041f\u0420\u041e\u0421\u042b\u042b\u042b"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$TfH22Mgyc1WE$5UGazfsdQzIO4X+4oSq0kPNYwiHS/oCxhU7IwU9+/9c=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "\u0444\u0434alishka1216",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-04-03T10:15:29.495Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$Fc3p35cL0fkK$GXiGRu3RWarTF8SSdFFwQJ/koEt3UvtyTXnARLt/PTI=",
+    "last_login": "2021-04-03T11:00:03.290Z",
+    "is_superuser": true,
+    "username": "alishka1216",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-04-03T10:59:48.625Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
