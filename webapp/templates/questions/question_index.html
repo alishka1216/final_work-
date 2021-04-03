@@ -1,4 +1,4 @@
-{% extends 'base' %}
+{% extends 'base.html' %}
 {% block content %}
     <h2>Вы уверены, что хотите удалить вопрос? {{ question.title }}</h2>
     <form action="{% url 'question-delete' question.pk %}" method="POST">

@@ -35,13 +35,13 @@ class QuestionCreate(CreateView):
 
 class QuestionUpdate(UpdateView):
     model = Question
-    template_name = 'questions/project_update.html'
+    template_name = 'questions/question_update.html'
     form_class = QuestionForm
     context_object_name = 'question'
 
 
 class QuestionDelete(DeleteView):
-    template_name = 'questions/project_delete.html'
+    template_name = 'questions/question_delete.html'
     model = Question
     context_object_name = 'question'
 
