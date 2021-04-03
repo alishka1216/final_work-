@@ -2,27 +2,23 @@
 {% extends "base.html" %}
 {% block  nav%}
 <li class="nav-item">
-<a class="nav-link" href="{% url 'question-add' answer.id %}">Добавить вопрос</a><br>
-</li>
-<li class="nav-item">
-        <a class="nav-link" href="{% url 'question-update' answer.id %}">Изменить вопрос</a>
+    <li class="nav-item">
+    <a class="nav-link" href="{% url 'answer-add' question.id %}">Добавить ответ</a><br>
+    </li>
+        <a class="nav-link" href="{% url 'question-update' question.id %}">Изменить вопрос</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'question-delete' answer.id %}">Удалить вопрос</a>
+        <a class="nav-link" href="{% url 'question-delete' question.id %}">Удалить вопрос</a>
       </li>
 {% endblock %}
 {%  block content %}
 
 
 
-    <h1>Проект № {{ question.id }}</h1>
+    <h1>вопрос № {{ question.id }}</h1>
     <p>Вопрос: {{ question.title }}</p>
-    <p>дата начало проекта: {{ question.date }}</p>
-    <p>дата конец проекта: {{ question.date_end }}</p>
-    {% for question in answer.answer_question.all %}
-        <a href="{% url 'tracker-view' answer.pk %}">{{question.title}}</a>
-    {% empty %}
-        <h2>Нет вопроса</h2>
+    {% for answer in question.question_answer.all %}
+       <p>Ответ: <a href="{% url 'answer-view' answer.pk %}">{{answer.title}}</a></p>
     {% endfor %}
 
 {% endblock content %}

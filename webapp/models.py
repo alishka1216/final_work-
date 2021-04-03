@@ -1,3 +1,4 @@
+from audioop import reverse
 
 from django.db import models
 
@@ -21,8 +22,6 @@ class BaseModel(models.Model):
 
 class Answer(BaseModel):
     title = models.CharField(max_length=3000, null=False, blank=False)
-    date = models.DateField(null=True, blank=True)
-    type = models.ManyToManyField('webapp.Type', related_name="answer")
     answer = models.ForeignKey('webapp.Question', null=True, related_name="question_answer", default=1,
                                 on_delete=models.CASCADE)
 
@@ -34,16 +33,10 @@ class Answer(BaseModel):
 
 class Question(BaseModel):
     title = models.CharField(max_length=200, null=False, blank=False)
-    date = models.DateField(null=False, blank=False)
-    date_end = models.DateField(null=True, blank=True)
+
 
     class Meta:
         db_table = 'Questions'
         verbose_name = 'Вопрос'
         verbose_name_plural = 'Вопросы'
-
-
-# tracker = answer
-# project = qestions
-
 

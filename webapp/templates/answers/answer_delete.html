@@ -5,5 +5,5 @@
         {% csrf_token %}
         <input class="btn btn-primary" type="submit" value="да">
     </form>
-    <a href="{% url "answer-view" pk %}"> <input class="btn btn-primary mt-2" type="submit" value="отмена"></a>
+    <a href="{% url "answer-view" answer.pk %}"> <input class="btn btn-primary mt-2" type="submit" value="отмена"></a>
 {% endblock content %}

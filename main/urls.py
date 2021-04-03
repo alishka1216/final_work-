@@ -10,7 +10,7 @@ from webapp.views import (
     QuestionView,
     QuestionCreate,
     QuestionDelete,
-    QuestionUpdate
+    QuestionUpdate,
 )
 
 # question = project
@@ -28,5 +28,5 @@ urlpatterns = [
     path('question/<int:pk>/', QuestionView.as_view(), name='question-view'),
     path('question/add/', QuestionCreate.as_view(), name='question-add'),
     path('question/update/<int:pk>/', QuestionUpdate.as_view(), name='question-update'),
-    path('question/delete/<int:pk>/', QuestionDelete.as_view(), name='question-delete')
+    path('question/delete/<int:pk>/', QuestionDelete.as_view(), name='question-delete'),
     ]

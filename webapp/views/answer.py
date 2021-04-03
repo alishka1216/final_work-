@@ -29,9 +29,8 @@ class CreateAnswerView(CreateView):
     def form_valid(self, form):
         question = get_object_or_404(Question, pk=self.kwargs.get('pk'))
         answer = form.save(commit=False)
-        answer.project = question
+        answer.answer = question
         answer.save()
-        form.save_m2m()
         return redirect('answer-view', pk=answer.pk)
 
     def get_success_url(self):
@@ -42,7 +41,7 @@ class AnswerUpdateView(UpdateView):
     model = Answer
     template_name = 'answers/answer_update.html'
     form_class = AnswerForm
-    context_object_name = 'tracker'
+    context_object_name = 'answer'
 
     def get_success_url(self):
         return reverse('answer-view', kwargs={'pk': self.object.pk})

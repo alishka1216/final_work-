@@ -10,5 +10,5 @@ from webapp.views.question import (
     QuestionView,
     QuestionUpdate,
     QuestionDelete,
-    QuestionCreate
+    QuestionCreate,
 )

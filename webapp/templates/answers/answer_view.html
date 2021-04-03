@@ -2,10 +2,10 @@
 {% extends "base.html" %}
 {% block  nav%}
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'tracker-update' answer.id %}">Изменить</a>
+        <a class="nav-link" href="{% url 'answer-update' answer.id %}">Изменить ответ</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'tracker-delete' answer.id %}">удалить</a>
+        <a class="nav-link" href="{% url 'answer-delete' answer.id %}">удалить ответ</a>
       </li>
 {% endblock %}
 {%  block content %}
@@ -13,6 +13,5 @@
 
 
     <p>Ответ: {{ answer.title }}</p>
-    <p>Тип: {% for type in answer.type.all %}{{ answer.name}} {% endfor %}</p>
     <p>время: {{ answer.created_ad }}</p>
 {% endblock content %}

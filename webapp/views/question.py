@@ -46,3 +46,4 @@ class QuestionDelete(DeleteView):
     context_object_name = 'question'
 
     success_url = reverse_lazy('question-list')
+
